@@ -1,0 +1,721 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+.gradient {
+    overflow: hidden;
+    width: 100%;
+    height: 400vh;
+    background-size: 100%;
+    background-attachment: fixed;
+    background-image: url(fon.jpg);
+}
+
+.menu {
+    /* background-color: #000000c0; */
+    /* top: 0; */
+    z-index: 9999;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position:fixed;
+}
+
+.menu>div {
+    width: 30%;
+    height: 80px;
+    /* background-color: aqua; */
+    background-position: center;
+    background-size: cover;
+    background-image: url(portfolio.png);
+    position: absolute;
+    left: 3%;
+}
+
+.menu>a {
+    position: relative;
+    text-decoration: none;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 5px;
+    color: whitesmoke;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 10%;
+    height: 40px;
+    margin: 20px;
+}
+
+.menu>a::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: rgb(175, 134, 0);
+    transform-origin: right top;
+    transform: scale(0, 1);
+    transition: color 0.1s, transform 0.2s ease-out;
+}
+
+.menu>a:active::before {
+    background-color: #FFF;
+}
+
+.menu>a:hover::before,
+.menu>a:focus::before {
+    transform-origin: left top;
+    transform: scale(1, 1);
+}
+.ddd{
+    /* margin-top: 20%; */
+    width: 100%;
+    height: 100px;
+    /* background-color: #000000; */
+}
+
+.front {
+    background-image: url(front.jpg);
+    background-size: cover;
+    margin-top: 2%;
+    height: 600px;
+    /* box-shadow: 5px 5px 10px black; */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+    position: relative;
+}
+.nkar {
+    margin-top: -20%;
+    opacity: 0;
+    width: 20%;
+    height: 300px;
+    box-shadow: 5px 5px 30px black;
+    background-color: #000000;
+    background-image: url(1.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    border: solid 8px rgb(109, 6, 6);
+    animation:nkar 0.8s cubic-bezier(.17,.67,.23,.27)  forwards ;
+}
+@keyframes nkar{
+    100%{ 
+        opacity: 1;
+        margin-top: 2%;
+    }
+}
+
+.animation-container {
+    position: absolute;
+    /* right: 20%; */
+    top: 80%;
+    overflow: hidden;
+    width: 100%;
+    height: 250px;
+    /* border-radius: 100px; */
+    /* box-shadow: 5px 5px 10px black; */
+    animation: op 1s linear forwards;
+    background-color:rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+    font-weight: 800;
+    font-size: 5em;
+    opacity: 0;
+}
+@keyframes op{
+    100%{
+        top: 60%;
+        opacity: 1;
+    }
+}
+
+.animation-container svg {
+    width: 100%;
+    display: block;
+    top: 50%;
+    margin: -5% 0 0 0;
+}
+
+.animation-container svg .text {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+    fill: transparent;
+    stroke-width: 1;
+    stroke-linejoin: round;
+    stroke-dasharray: 90, 310;
+    stroke-dashoffset: 0;
+    -webkit-animation: text 8s infinite linear;
+    animation: text 8s infinite linear;
+}
+
+.animation-container svg .text:nth-child(4n + 1) {
+    stroke: rgb(138, 138, 138);
+    -webkit-animation-delay: -2s;
+    animation-delay: -2s;
+}
+
+.animation-container svg .text:nth-child(4n + 2) {
+    stroke: rgb(255, 174, 0);
+    -webkit-animation-delay: -4s;
+    animation-delay: -4s;
+}
+
+.animation-container svg .text:nth-child(4n + 3) {
+    stroke: rgb(5, 0, 77);
+    -webkit-animation-delay: -6s;
+    animation-delay: -6s;
+}
+
+.animation-container svg .text:nth-child(4n + 4) {
+    stroke: rgb(255, 0, 0);
+    -webkit-animation-delay: -8s;
+    animation-delay: -8s;
+}
+
+@-webkit-keyframes text {
+    100% {
+        stroke-dashoffset: -400;
+    }
+}
+.dd{
+    width: 100%;
+    height: 100px;
+}
+.about{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+    text-align: center;
+    font-size: 50px;
+    color: orangered;
+    text-shadow: 5px 5px 10px black;
+    /* background-color: #000000; */
+}
+.me{
+    margin-top: 5%;
+    width: 100%;
+    height: 400px;
+    /* background-color: #000000; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.me>div{
+    width: 40%;
+    height: 400px;
+    /* background-color: red; */
+    margin: 5px
+}
+.nkar2{
+    background-image: url(2.webp);
+    box-shadow: 5px 5px 40px black;
+    background-size: cover;
+    border-radius: 5px;
+}
+.text2{
+    background-color:rgba(0, 0, 0, 0.3);
+    box-shadow: 5px 5px 15px black;
+    border-radius: 20px;
+    z-index: 2;
+    transform: rotate(5deg);
+}
+.text2>p{
+    width: 100%;
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 40px;
+    color: whitesmoke;
+    text-shadow: 5px 5px 10px rgb(12, 12, 12);
+    /* text-align: center; */
+}
+
+#proects{
+    width: 100%;
+    height: 100px;
+}
+
+
+
+:root {
+	--dark: #070707;
+	--sizeindex: calc(1vw + 1vh);
+	--transition: .75s cubic-bezier(.2, .6, 0, 1);
+}
+@font-face {
+	font-family: raleway_m;
+	src: url(../fonts/raleway-v22-cyrillic-300.woff2);
+	font-weight: 300;
+}
+@font-face {
+	font-family: raleway_m;
+	src: url(../fonts/raleway-v22-cyrillic-900.woff2);
+	font-weight: 900;
+}
+
+
+
+.slider {
+    width: 100%;
+	height: 500px;
+	/* transform: rotate(0deg); */
+	overflow: visible;
+    /* background-color: #000000; */
+    /* overflow: hidden; */
+	top: -40vh;
+}
+.slier__wrapper {
+    /* background-color: #000000; */
+	transition: var(--transition)!important;
+	will-change: transform;
+}
+.slider__item {
+	max-height: 95vh;
+    background-color: #000000;
+	overflow: hidden;
+	cursor: pointer;
+	transition: transform var(--transition), box-shadow var(--transition);
+}
+.slider__img {
+    background-color: #000000;
+	width: 300%;
+	height: 100%;
+	background-size: cover;
+	position: absolute;
+	left: -100%;
+	transition: var(--transition)!important;
+	will-change: transform;
+}
+.slider_bg {
+	z-index: 0;
+	/* transform: rotate(-20deg)!important; */
+	top: -90vh;
+	left: -10vh;
+	opacity: .15;
+	filter: blur(120px) saturate(10);
+}
+.slider_bg .slider__item {
+	max-height: 100vh;
+}
+.slider__item.opened {
+	z-index: 2;
+	transform:  scale(1.45);
+	box-shadow: rgb(0 0 0 / .75) 0 0 0 10000px;
+}
+.description {
+    margin-left: 5%;
+    margin-top: 5%;
+    /* background-color: #000000; */
+	font-size: calc(var(--sizeindex) * .8);
+	top: 20vh;
+	left: 8vw;
+	max-width: 24vw;
+	transition: opacity var(--transition), transform var(--transition);
+}
+.logo {
+	font-size: calc(var(--sizeindex) * 3.6);
+	font-weight: 900;
+	display: inline-block;
+	background: linear-gradient(45deg, DarkMagenta, Tomato, Violet);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.description p {
+    width: 100%;
+	color: white;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	line-height: 1.8;
+	opacity: .9;
+	transition: transform var(--transition);
+	transition-duration: 3s;
+}
+.description.hidden {
+	opacity: 0;
+	transform: translateY(5vh);
+}
+.description.hidden p {
+	transform: translateY(2vh);
+}
+.slider__item>a {
+    text-decoration: none;
+    box-sizing: border-box;
+    padding: 10px;
+    z-index: 4;
+    position: fixed;
+    width: 100%;
+    position: absolute;
+    height: 60px;
+    text-align: center;
+    box-sizing: border-box;
+    /* border-radius: 30px; */
+    font-size: 20px;
+    color: whitesmoke;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgba(0, 0, 0, 0.80);
+    /* left: -15px; */
+    top: 80%;
+    border-bottom-left-radius: 0;
+
+}
+
+#contact{
+    margin-top: -50%;
+    width: 100%;
+    height: 100px;
+    /* background-color: #000000; */
+}
+
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.contact-area {
+    /* background-color: #000000; */
+    width: 100%;
+    height: 100vh;
+    background-image: url(contact.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.contact {
+    position: relative;
+    max-width: 60%;
+    padding: 40px 20px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+@media (min-width: 1024px) {
+    .contact {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+   }
+}
+.contact main {
+    float: left;
+    width: 100%;
+    position: relative;
+}
+.contact main section {
+    border-radius: 5px;
+    float: left;
+    width: 100%;
+    background-color: #2e2a2a;
+}
+.contact main section .content {
+    float: left;
+    width: 100%;
+    padding: 20px 30px 50px 30px;
+    position: relative;
+    text-align: center;
+}
+@media (min-width: 414px) {
+    .contact main section .content {
+        text-align: left;
+   }
+}
+.contact main section .content img {
+    display: inline-block;
+    width: 140px;
+    border-radius: 50%;
+}
+@media (min-width: 414px) {
+    .contact main section .content img {
+        float: left;
+        width: 30%;
+        margin-right: 10%;
+   }
+}
+.contact main section .content aside {
+    float: left;
+    width: 100%;
+    color: #fff;
+    margin-top: 10px;
+}
+@media (min-width: 414px) {
+    .contact main section .content aside {
+        width: 60%;
+   }
+}
+.contact main section .content aside h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 100;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+.contact main section .content aside p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    line-height: 160%;
+}
+.contact main .title {
+    float: left;
+    width: 100%;
+    background-color: #c63535;
+    max-height: 0px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    overflow: hidden;
+    -webkit-transition: all 0.55s;
+    -moz-transition: all 0.55s;
+    -o-transition: all 0.55s;
+    transition: all 0.55s;
+}
+.contact main .title.active {
+    max-height: 100px;
+    -webkit-transition: all 1.3s;
+    -moz-transition: all 1.3s;
+    -o-transition: all 1.3s;
+    transition: all 1.3s;
+}
+.contact main .title.active p {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    transition-delay: 0.2s;
+}
+.contact main .title p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 15px 30px;
+    color: #fff;
+    font-size: 16px;
+    display: inline-block;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+}
+.contact main button {
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    background-color: #ffbe44;
+    color: #c63535;
+    border: 0;
+    width: 200px;
+    height: 48px;
+    text-align: center;
+    border-radius: 30px;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: -24px;
+    margin-right: -100px;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+    transition-delay: 0.1s;
+    outline: none;
+    overflow: hidden;
+    z-index: 10;
+    font-family: inherit;
+}
+.contact main button span {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    opacity: 1;
+    -webkit-transition: opacity 0.2s;
+    -moz-transition: opacity 0.2s;
+    -o-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+    transition-delay: 0.4s;
+    display: block;
+    width: 200px;
+    float: left;
+    padding: 15px 0px;
+}
+.contact main button svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+}
+.contact main button svg path {
+    fill: #c63535;
+}
+.contact main button.active {
+    margin-right: 0;
+    right: 20px;
+    width: 65px;
+    height: 65px;
+    margin-bottom: -32.5px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    border-radius: 65px;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+}
+.contact main button.active span {
+    opacity: 0;
+    transition-delay: 0s;
+    width: 200px;
+}
+.contact main button.active svg {
+    opacity: 1;
+    transition-delay: 0.5s;
+}
+.contact nav {
+    float: left;
+    width: 100%;
+    overflow: hidden;
+    max-height: 0px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+.contact nav.active {
+    max-height: 600px;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+.contact nav.active a {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    transform: translateY(0px);
+    -webkit-transition: all 0.7s;
+    -moz-transition: all 0.7s;
+    -o-transition: all 0.7s;
+    transition: all 0.7s;
+}
+.contact nav.active a:nth-of-type(1) {
+    transition-delay: 0.5s;
+}
+.contact nav.active a:nth-of-type(2) {
+    transition-delay: 0.7s;
+}
+.contact nav.active a:nth-of-type(3) {
+    transition-delay: 0.9s;
+}
+.contact nav a {
+    float: left;
+    width: 100%;
+    margin-top: 18px;
+    background-color: #fff;
+    padding: 18px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    opacity: 0;
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    transform: translateY(-10px);
+    position: relative;
+}
+@media (min-width: 414px) {
+    .contact nav a {
+        padding: 18px 30px;
+   }
+}
+.contact nav a .arrow {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.contact nav a .arrow path {
+    fill: #e6e6e6;
+}
+.contact nav a.gmail .icon svg {
+    background-color: #d14836;
+}
+.contact nav a.gmail .content h1 {
+    color: #d14836;
+}
+.contact nav a.facebook .icon svg {
+    background-color: #3b5998;
+}
+.contact nav a.facebook .content h1 {
+    color: #3b5998;
+}
+.contact nav a.twitter .icon svg {
+    background-color: #1da1f2;
+}
+.contact nav a.twitter .content h1 {
+    color: #1da1f2;
+}
+.contact nav a .icon {
+    float: left;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 20px;
+}
+.contact nav a .icon svg {
+    width: 100%;
+    height: 100%;
+    padding: 14px;
+}
+.contact nav a .icon svg path {
+    fill: #fff;
+}
+.contact nav a .content h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 160%;
+    letter-spacing: 0.4px;
+}
+.contact nav a .content span {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    color: #b3b3b3;
+    display: block;
+    letter-spacing: 0.4px;
+}
+
+
